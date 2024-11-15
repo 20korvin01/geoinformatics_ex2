@@ -1,6 +1,5 @@
 import matplotlib.pyplot as plt
 import numpy as np
-import sys
 import os
 
 # CHECK IF POINTS ARE IN POLYGON 
@@ -30,11 +29,39 @@ def reading_datapoints(filename, name_parser) -> dict:
     return points_dict
 ## Points
 points = reading_datapoints("Points.txt", 2)
-print(points)
 
 ## Polygon Points
 polygon = reading_datapoints("Polygon.txt", 3)
-print(polygon)
+
+
+def drawing_scatter_point(axs, point_name, x, y):
+    axs.scatter(x, y, color="k", marker="+")
+    axs.text(x+0.3,y, str(point_name))
+
+## creating polygon arrays
+x_polygon = []
+y_polygon = []
+for polygon_point in polygon.values():
+    x_polygon.append(polygon_point[0])
+    y_polygon.append(polygon_point[1])
+
+
+figure, axs = plt.subplots()
+axs.fill(x_polygon, y_polygon, alpha=0.5, facecolor="none", edgecolor="k")
+
+for point_name, point in zip(points.keys() ,points.values()):
+    drawing_scatter_point(axs, point_name, point[0], point[1])
+    
+
+plt.show()
+
+
+
+## Things to consider
+    # - Line intersect algorithm 
+    # - Ray casting algorithm 
+    # - Winding number algorithm 
+    # - 
 
 
 
