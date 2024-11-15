@@ -3,6 +3,8 @@ import numpy as np
 import sys
 import os
 
+# CHECK IF POINTS ARE IN POLYGON 
+
 ### Importing data points and polygons
 ROOT_DIR = os.path.realpath(os.path.join(os.path.dirname(__file__)))
 data_path = os.path.join(os.path.dirname(ROOT_DIR), "data")
@@ -23,6 +25,7 @@ for index, point in enumerate(points_lst):
     for i in range(0, len(points_lst[index])):
         points_lst[index][i] =  float(points_lst[index][i])
 
+points_dict = {points_str[i]:points_lst[i] for i in range(0, len(points_str))}
 
-print(points_lst)
+print(points_dict)
 
