@@ -53,9 +53,26 @@ def QuickHull(points):
 convex_hull = QuickHull(points)
 hull_x, hull_y = zip(*convex_hull)
 
+
 # Stop timing
 end_time = time.time()
 computation_time_ms = (end_time - start_time)*1000
+
+
+# Print Point List with coordinates
+print("Point List (Point Number, X-Coordinate, Y-Coordinate):")
+for i, (x, y) in enumerate(points):
+    print(f"Point {i+1}: ({x}, {y})")
+
+# Print Convex Hull Point Numbers
+hull_indices = []
+for hull_point in convex_hull:
+    index = np.where(np.all(points == hull_point, axis=1))[0][0]
+    hull_indices.append(index + 1)  # indices starting from 1
+hull_indices.sort()
+print("\nConvex Hull (Point Numbers):")
+print(hull_indices)
+
 
 # Create figure with points and Convex Hull
 plt.figure(figsize=(8, 8))
