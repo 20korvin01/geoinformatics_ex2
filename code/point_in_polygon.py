@@ -65,6 +65,7 @@ def is_point_in_polygon(point, polygon):
         if min(y1, y2) < y <= max(y1, y2):
             # Compute the x-coordinate of the intersection of the ray with the edge
             x_intersection = (y - y1) * (x2 - x1) / (y2 - y1) + x1
+            print(x_intersection)
             
             # Check if the ray crosses the edge to the right of the point
             if x_intersection > x:
