@@ -1,0 +1,59 @@
+<mxfile host="Electron" agent="Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/24.7.17 Chrome/128.0.6613.36 Electron/32.0.1 Safari/537.36" version="24.7.17">
+  <diagram name="Page-1" id="edf60f1a-56cd-e834-aa8a-f176f3a09ee4">
+    <mxGraphModel dx="722" dy="508" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="583" pageHeight="413" background="none" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="dFATiUyENoA6fPe-YIpw-3" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="dFATiUyENoA6fPe-YIpw-1" target="dFATiUyENoA6fPe-YIpw-6">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="316.0000000000001" y="163" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="dFATiUyENoA6fPe-YIpw-4" value="Draw horizontal line to point" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="dFATiUyENoA6fPe-YIpw-3">
+          <mxGeometry x="-0.1081" y="3" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="dFATiUyENoA6fPe-YIpw-1" value="Input Point&lt;div&gt;(x, y)&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="66" y="33" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="dFATiUyENoA6fPe-YIpw-8" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="dFATiUyENoA6fPe-YIpw-6" target="dFATiUyENoA6fPe-YIpw-7">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="dFATiUyENoA6fPe-YIpw-6" value="Count Intersection with Polygon boarders/edges" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="66" y="148" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="dFATiUyENoA6fPe-YIpw-19" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="dFATiUyENoA6fPe-YIpw-7" target="dFATiUyENoA6fPe-YIpw-12">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="dFATiUyENoA6fPe-YIpw-20" value="Even" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="dFATiUyENoA6fPe-YIpw-19">
+          <mxGeometry x="-0.2295" y="2" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="dFATiUyENoA6fPe-YIpw-23" value="EVEN" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="dFATiUyENoA6fPe-YIpw-19">
+          <mxGeometry x="-0.1841" y="2" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="dFATiUyENoA6fPe-YIpw-21" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="dFATiUyENoA6fPe-YIpw-7" target="dFATiUyENoA6fPe-YIpw-9">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="dFATiUyENoA6fPe-YIpw-22" value="ODD" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="dFATiUyENoA6fPe-YIpw-21">
+          <mxGeometry x="-0.086" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="dFATiUyENoA6fPe-YIpw-7" value="# Intersections&amp;nbsp;" style="rhombus;whiteSpace=wrap;html=1;rounded=1;" vertex="1" parent="1">
+          <mxGeometry x="266" y="123" width="110" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="dFATiUyENoA6fPe-YIpw-12" value="Point is outside of Polygon&lt;div&gt;TRUE&lt;/div&gt;" style="whiteSpace=wrap;html=1;rounded=1;" vertex="1" parent="1">
+          <mxGeometry x="261" y="313" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="dFATiUyENoA6fPe-YIpw-9" value="Point is inside of Polygon&lt;div&gt;FALSE&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="450" y="148" width="120" height="60" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
