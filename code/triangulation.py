@@ -2,6 +2,8 @@ import numpy as np
 import matplotlib.pyplot as plt
 from scipy.spatial import Delaunay
 
+
+
 # Function to handle triangle highlighting
 def on_click(event, points, tri):
     if event.inaxes is not None:
@@ -35,7 +37,7 @@ def on_click(event, points, tri):
                 
                 # Annotate vertices
                 for vertex_index, (x, y) in zip(simplex, vertices):
-                    plt.text(x, y, str(vertex_index), color="blue", fontsize=10, ha='center', va='bottom')
+                    plt.text(x, y, str(vertex_index), color="black", fontsize=10, ha='center', va='bottom')
                 
                 # Redraw the plot
                 plt.plot(points[:, 0], points[:, 1], 'o', color="blue")  # Blue points
@@ -50,8 +52,8 @@ def delaunay_triangulation(points):
     # Plot the triangulation with initial colors
     fig, ax = plt.subplots()
     plt.triplot(points[:, 0], points[:, 1], tri.simplices, color="gray", alpha=0.5)  # Gray lines
-    plt.plot(points[:, 0], points[:, 1], 'o', color="blue")  # Blue points
-    plt.title("Click on a Triangle")
+    plt.plot(points[:, 0], points[:, 1], 'o', color="blue", markersize=3)  # Blue points
+    plt.title("Triangulation")
     
     # Connect the click event
     fig.canvas.mpl_connect('button_press_event', lambda event: on_click(event, points, tri))
