@@ -13,6 +13,7 @@ import os
 ### Importing data points and polygons
 ROOT_DIR = os.path.realpath(os.path.join(os.path.dirname(__file__)))
 data_path = os.path.join(os.path.dirname(ROOT_DIR), "data")
+figure_path = os.path.join(os.path.dirname(ROOT_DIR),"figures")
 
 def reading_datapoints(filename, name_parser) -> dict:
     with open(os.path.join(data_path, str(filename)), "r") as f:
@@ -40,9 +41,15 @@ points = reading_datapoints("Points.txt", 2)
 polygon = reading_datapoints("Polygon.txt", 3)
 
 
-def drawing_scatter_point(axs, point_name, x, y):
-    axs.scatter(x, y, color="k", marker="+")
+def drawing_scatter_point(axs, point_name, x, y, true_false):
+    if true_false:
+        color_indicator = 'g'
+    else:
+        color_indicator = 'r'
+    
+    axs.scatter(x, y, marker="o", color=color_indicator)    
     axs.text(x+0.3,y, str(point_name))
+
 
 def is_point_in_polygon(point, polygon):
     """
@@ -89,13 +96,18 @@ for polygon_point in polygon.values():
 
 
 figure, axs = plt.subplots()
-axs.fill(x_polygon, y_polygon, alpha=0.5, facecolor="none", edgecolor="k")
+axs.fill(x_polygon, y_polygon, alpha=0.5, facecolor="none", edgecolor="k") #edgecolor="k"
 
-for point_name, point in zip(points.keys() ,points.values()):
-    drawing_scatter_point(axs, point_name, point[0], point[1])
-    
+for point_name, point, true_false in zip(points.keys(), points.values(), inside_lst):
+    drawing_scatter_point(axs, point_name, point[0], point[1], true_false)
+
+axs.set_xlabel("X")
+axs.set_ylabel("Y")
+figure.tight_layout()
+
+
 plt.show()
-
+figure.savefig("point_in_polygon.png")
 
 
 
